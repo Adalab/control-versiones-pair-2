@@ -31,20 +31,33 @@ const max=document.querySelector('.js-max');
 const min=document.querySelector('.js-min');
 const init=document.querySelector('.js-init');
 const current=document.querySelector('.js-current');
+const clickBtn=document.querySelector('.js-click');
 
 const btnAdd=document.querySelector('.js-btn-add');
 const btnRest=document.querySelector('.js-btn-rest');
 const btnRst=document.querySelector('.js-btn-rst');
 
 //*FUNCIONES
-handleAdd(){}
-handleRest(){}
-handleRst(){}
+function handleClick(event){
+    console.log(event.target);
+    console.log(event.currentTarget);
+    //!las dos loguearán lo mismo si se clickea en la sección, pero cosas distintas en cada botón
+}
+function handleAdd(event){
+
+}
+function handleRest(event){
+
+}
+function handleRst(event){
+
+}
 
 //*EVENTOS
 btnAdd.addEventListener('click',handleAdd);
 btnRest.addEventListener('click',handleRest);
 btnRst.addEventListener('click',handleRst);
+clickBtn.addEventListener('click',handleClick);
 
 // const basket ={
 //     max:10,
