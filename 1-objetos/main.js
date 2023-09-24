@@ -63,16 +63,18 @@ function handleAdd(event) {
     if(basket.current<basket.max){
         basket.current+=1;
         currentPear.innerHTML = `Cantidad actual: ${basket.current}`;
-    }else{currentPear.innerHTML += `Cantidad actual: ${basket.current}, has alcanzado el número máximo de peras`;}
+    }else{currentPear.innerHTML = `Cantidad actual: ${basket.current}, has alcanzado el número máximo de peras`;}
 }
 function handleRest(event) {
     if(basket.current>basket.min){
         basket.current-=1;
         currentPear.innerHTML = `Cantidad actual: ${basket.current}`;
-    }else{currentPear.innerHTML += `Cantidad actual: ${basket.current}, ya no puedes quitar más peras`;}
+    }else{currentPear.innerHTML = `Cantidad actual: ${basket.current}, ya no puedes quitar más peras`;}
 }
 function handleRst(event) {
     basket.current===basket.init;
+    currentPear.innerHTML = `Cantidad actual: ${basket.init}`;
+    //aquí se resetea, pero al seguir sumando o restando, lo hace desde el número anterior al reinicio
 }
 
 //*EVENTOS
