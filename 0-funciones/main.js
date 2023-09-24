@@ -120,14 +120,3 @@ function handleClickColor() {
 }
 btnColor.addEventListener('click', handleClickColor);
 
-// 1. Variables globales
-// Analiza el siguiente código:
-// modificamos una variable de ámbito global
-// let secretLetter = 'y';
-// function mySecretLetter() {
-//   secretLetter = 'x';
-//   return secretLetter;
-// }
-// console.log(mySecretLetter()); // devuelve "x"
-// console.log(secretLetter); // devuelve "x"
-// Prueba a cambiar el orden del los console.log. ¿Qué está pasando? ¿Por qué no se imprime en la consola 2 veces "x"?
