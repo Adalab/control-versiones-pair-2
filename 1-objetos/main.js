@@ -38,33 +38,45 @@ const btnRest = document.querySelector('.js-btn-rest');
 const btnRst = document.querySelector('.js-btn-rst');
 const clickBtn = document.querySelector('.js-click');
 
+//*objeto
+const basket = {
+  max: 10,
+  min: 1,
+  init: 2,
+  current: 5,
+  // add: 
+  // rest: 
+  // reset: 
+};
+maxPear.innerHTML += basket.max;
+minPear.innerHTML += basket.min;
+initPear.innerHTML += basket.init;
+currentPear.innerHTML += basket.current;
+
 //*FUNCIONES
 function handleClick(event) {
   console.log(event.target);
   console.log(event.currentTarget);
   //!las dos loguearán lo mismo si se clickea en la sección, pero cosas distintas en cada botón
 }
-function handleAdd(event) {}
-function handleRest(event) {}
-function handleRst(event) {}
+function handleAdd(event) {
+    if(basket.current<basket.max){
+        basket.current+=1;
+        currentPear.innerHTML = `Cantidad actual: ${basket.current}`;
+    }else{currentPear.innerHTML += `Cantidad actual: ${basket.current}, has alcanzado el número máximo de peras`;}
+}
+function handleRest(event) {
+    if(basket.current>basket.min){
+        basket.current-=1;
+        currentPear.innerHTML = `Cantidad actual: ${basket.current}`;
+    }else{currentPear.innerHTML += `Cantidad actual: ${basket.current}, ya no puedes quitar más peras`;}
+}
+function handleRst(event) {
+    basket.current===basket.init;
+}
 
 //*EVENTOS
 btnAdd.addEventListener('click', handleAdd);
 btnRest.addEventListener('click', handleRest);
 btnRst.addEventListener('click', handleRst);
 clickBtn.addEventListener('click', handleClick);
-
-//*OBJETO
-const basket = {
-  max: 10,
-  min: 0,
-  init: 1,
-  current: 7,
-  add: current++,
-  rest: current--,
-  reset: current === initial,
-};
-maxPear.innerHTML += basket.max;
-minPear.innerHTML += basket.min;
-initPear.innerHTML += basket.init;
-currentPear.innerHTML += basket.current;
