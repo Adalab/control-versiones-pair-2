@@ -36,7 +36,7 @@ const currentPear = document.querySelector('.js-current');
 const btnAdd = document.querySelector('.js-btn-add');
 const btnRest = document.querySelector('.js-btn-rest');
 const btnRst = document.querySelector('.js-btn-rst');
-const clickBtn = document.querySelector('.js-click');
+
 
 //*objeto
 const basket = {
@@ -54,11 +54,6 @@ initPear.innerHTML += basket.init;
 currentPear.innerHTML += basket.current;
 
 //*FUNCIONES
-function handleClick(event) {
-  console.log(event.target);
-  console.log(event.currentTarget);
-  //!las dos loguearán lo mismo si se clickea en la sección, pero cosas distintas en cada botón
-}
 function handleAdd(event) {
     if(basket.current<basket.max){
         basket.current+=1;
@@ -81,4 +76,3 @@ function handleRst(event) {
 btnAdd.addEventListener('click', handleAdd);
 btnRest.addEventListener('click', handleRest);
 btnRst.addEventListener('click', handleRst);
-clickBtn.addEventListener('click', handleClick);

@@ -120,3 +120,10 @@ function handleClickColor() {
 }
 btnColor.addEventListener('click', handleClickColor);
 
+//*target y current target
+function handleClick(event) {
+  console.log(event.target);
+  console.log(event.currentTarget);
+      //!las dos loguearán lo mismo si se clickea en la sección, pero cosas distintas en cada botón
+}
+body.addEventListener('click', handleClick);
