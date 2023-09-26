@@ -42,6 +42,15 @@ for (let i = 0; i < 10; i++) {
 console.log('El resultado es ' + resultado);
 
   //TODO 2. La media
-//  a) Crea un nuevo array numbers que contendrá 5 números cualesquiera y recorre el array mediante un bucle para calcular la media de los números (la suma de los números dividido por cuántos hay, es decir, 5). Necesitas una variable (acumulador) para ir almacenando la suma de todos los números y después poder hacer la media. Para comprobar si el resultado es correcto, loguealo en la consola.
+// *a) Crea un nuevo array numbers con 5 números y recorrelo con un bucle para calcular la media de los números . Necesitas una variable (acumulador) para ir almacenando la suma de todos los números y después poder hacer la media. Para comprobar si el resultado es correcto, loguealo en la consola.
+const someNumbers = [9, 1, 2, 6, 7];
+let accMedia = 0;
+function media(){
+  for (let i = 0; i < someNumbers.length; i++) {
+    accMedia += someNumbers[i];
+  }
+  return accMedia/someNumbers.length;
+}
+console.log(media());
 // b) Añade un nuevo número al array y repetir el cálculo de la media. En este caso, para calcular la media habrá que sumar todos y dividir entre el total, que ahora es 6.
 // c) Crea una función average, que toma como parámetro un array numbers, calcula la media del array (de cualquier longitud) y devuelve la media. Para trabajar con arrays de cualquier longitud, deberemos consultar la longitud del array mediante su propiedad length. Para comprobar que la función hace el cálculo correcto, la invocaremos (o ejecutaremos para que no suene tan esotérico) varias veces pasándole como argumento un array con diferente longitud cada vez y mostraremos el resultado en la consola del navegador.
