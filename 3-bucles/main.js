@@ -56,7 +56,7 @@ console.log(calcMedia());
 someNumbers[5]=8;
 console.log(calcMedia());
 
-// *c) Crea una función que toma como parámetro un array numbers, calcula la media del array (de cualquier longitud). Para comprobar que la función hace el cálculo correcto, la invocaremos  varias veces pasándole como argumento un array con diferente longitud cada vez y mostraremos el resultado en la consola del navegador.
+// *c) Función media con parámetros
 const arr1 = [1, 2, 6, 7];
 const arr2 = [9, 1, 2];
 const arr3 = [6, 3, 8, 4, 10];
@@ -88,3 +88,7 @@ function handleFavs(event){
 }
 
 favsBtn.addEventListener ('click', handleFavs);
+
+//TODO Ejercicio Extra. Previsión para ver la Luna del cazador
+// Cada 3 años se produce la Luna del cazador. Se vio el 5/10/2017. Vamos a crear un código que muestre en consola cuándo serán las 15 próximas lunas.
+// Antes de programar nada, escribamos el listado de las acciones (algoritmo) que tenemos que realizar.
