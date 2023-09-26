@@ -25,7 +25,7 @@ function render(adalaber) {
 render(adalaber1);
 render(adalaber2);
 
-//TODO:Cesta de peras2 Crear una cesta de peras
+//TODO:Cesta de peras Crear una cesta de peras
 
 //*CONSTANTES
 const maxPear = document.querySelector('.js-max');
@@ -67,7 +67,7 @@ function handleRest(event) {
     }else{currentPear.innerHTML = `Cantidad actual: ${basket.current}, ya no puedes quitar más peras`;}
 }
 function handleRst(event) {
-    basket.current===basket.init;
+    basket.current=basket.init;
     currentPear.innerHTML = `Cantidad actual: ${basket.init}`;
     //aquí se resetea, pero al seguir sumando o restando, lo hace desde el número anterior al reinicio
 }
