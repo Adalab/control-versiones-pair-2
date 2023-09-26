@@ -40,7 +40,7 @@ function workWithMovies(){
 }
 workWithMovies()
 
-
+//TODO Este ya ni me acuerdo que era, creo que el que les conté que estaba en un repositorio
 const promos = [
   {
     promo: 'A',
