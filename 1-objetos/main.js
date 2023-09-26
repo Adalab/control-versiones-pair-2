@@ -1,5 +1,5 @@
 'use strict';
-//TODO: Adalabers
+//TODO 1.Adalabers
 const body = document.querySelector('.js-body');
 
 const adalaber1 = {
@@ -25,7 +25,7 @@ function render(adalaber) {
 render(adalaber1);
 render(adalaber2);
 
-//TODO:Cesta de peras Crear una cesta de peras
+//TODO 2.Cesta de peras Crear una cesta de peras
 
 //*CONSTANTES
 const maxPear = document.querySelector('.js-max');
@@ -75,3 +75,19 @@ function handleRst(event) {
 btnAdd.addEventListener('click', handleAdd);
 btnRest.addEventListener('click', handleRest);
 btnRst.addEventListener('click', handleRst);
+
+// TODO 3. Estructura de datos para un usuario
+const job= 'developer';
+const user= {};
+user.firstName= 'Bruno';
+user.lastName= 'Díaz';
+user.age= 40;
+user.job=job;
+
+console.log(user);
+
+user.firstName= 'Batman';
+user.age++;
+
+console.log(user);
+
