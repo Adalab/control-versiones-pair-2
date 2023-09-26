@@ -73,4 +73,18 @@ console.log(media(arr2));
 console.log(media(arr3));
 
 //TODO 3. Tenemos mucho en común
-// Usando for...of haz un pequeño programa que le pregunte a la usuaria cuáles son sus dos películas o libros favoritos mediante un formulario. Cuando pulse el botón enviar guardaremos la información en un array, lo recorreremos y mostraremos este mensaje por cada obra: "¡A mí también me encantó "OBRA"! Tenemos mucho en común, humana.", donde OBRA será el nombre de la obra.
+const input1=document.querySelector('.js-favs1');
+const input2=document.querySelector('.js-favs2');
+const favsBtn=document.querySelector('.js-favs-btn');
+const favs=[];
+
+function handleFavs(event){
+  event.preventDefault();
+  favs[0]= input1.value;
+  favs[1]= input2.value;
+  for (const fav of favs) {
+    console.log(`¡A mí también me encantó "${fav}"! Tenemos mucho en común, humana.`);
+  }
+}
+
+favsBtn.addEventListener ('click', handleFavs);
