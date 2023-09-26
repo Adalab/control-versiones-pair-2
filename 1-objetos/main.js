@@ -69,7 +69,6 @@ function handleRest(event) {
 function handleRst(event) {
     basket.current=basket.init;
     currentPear.innerHTML = `Cantidad actual: ${basket.init}`;
-    //aquí se resetea, pero al seguir sumando o restando, lo hace desde el número anterior al reinicio
 }
 
 //*EVENTOS
