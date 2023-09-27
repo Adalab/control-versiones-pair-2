@@ -166,5 +166,18 @@ function countDesigners(listado){
   return designers.length
 }
 console.log(countDesigners(adalabers));
-// Al final, modifica la estructura de datos para añadir, modificar o quitar adalabers. Y prueba que las funciones siguen devolviendo el valor correcto.
+
+
+adalabers[3].adaJob='Diseñadora'
+console.log(countDesigners(adalabers));
+
+adalabers.push({
+  adaName:'Laura', 
+  adaAge:33,
+  adaJob:'Tejedora'});
+
+console.log(averageAge(adalabers));
+console.log(countAdalabers(adalabers));
+
+
 
