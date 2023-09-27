@@ -108,29 +108,3 @@ for (let i = 0; i <=15; i++) {
   sumar();
   dates.push(years);
 }
-//*LO QUE LE COMENTÓ CHAT GPT A ARAN
-// Paso 1: Definir el año actual y el contador de Lunas
-let year = 2017;
-let count = 0;
-const hunterMoons = []; // Array para almacenar las fechas
-// Paso 3: Crear un bucle para encontrar las próximas 15 Lunas del cazador
-while (count < 15) {
-  // Paso 4a: Verificar si el año es divisible por 3
-  if (year % 3 === 0) {
-    // Paso 4b: Verificar si la fecha es el 5 de octubre o el año siguiente
-    const moonDate = new Date(year, 9, 5); // 9 representa octubre (los meses comienzan desde 0)
-    const nextYearMoonDate = new Date(year + 1, 9, 5);
-    const currentDate = new Date(); // Obtener la fecha actual
-    if (currentDate >= moonDate && currentDate <= nextYearMoonDate) {
-      // Paso 5: Almacenar la fecha en el array
-      hunterMoons.push(moonDate.toDateString());
-      count++;
-    }
-  }
-  // Paso 6: Incrementar el año
-  year++;
-}
-// Mostrar las fechas almacenadas en el array
-hunterMoons.forEach((date, index) => {
-  console.log(`Luna del cazador ${index + 1}: ${date}`);
-});
