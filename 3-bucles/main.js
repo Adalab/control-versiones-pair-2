@@ -103,3 +103,68 @@ function moonYears(){
 
 moonYears();
 
+//TODO 1. A story of adalabers
+const adalabers=[
+  {
+    adaName:'María',
+    adaAge:29,
+    adaJob:'Diseñadora',
+  },
+  {
+    adaName:'Lucia',
+    adaAge:31,
+    adaJob:'Ingeniera química',
+  },
+  {
+    adaName:'Susana',
+    adaAge:34,
+    adaJob:'Periodista',
+  },
+  {
+    adaName:'Rocío',
+    adaAge:25,
+    adaJob:'Actriz',
+  },
+  {
+    adaName:'Inmaculada',
+    adaAge:21,
+    adaJob:'Diseñadora',
+  },
+]
+
+const countAdalabers = listado => listado.length;
+console.log(countAdalabers(adalabers));
+
+function averageAge(listado){
+let ages=0;
+for (const adalaber of listado) {
+  ages+=adalaber.adaAge;
+}
+console.log(ages);
+return ages/countAdalabers(listado)
+}
+console.log(averageAge(adalabers));
+
+function theYoungest(listado) {
+  let youngest = listado[0];
+  for (const adalaber of listado) {
+    if (adalaber.adaAge < youngest.adaAge) {
+      youngest = adalaber;
+    }
+  }
+  return youngest.adaName;
+}
+console.log(theYoungest(adalabers));
+
+function countDesigners(listado){
+  let designers=[];
+  for (const adalaber of listado) {
+    if (adalaber.adaJob==="Diseñadora") {
+      designers.push(adalaber);
+    }
+  }
+  return designers.length
+}
+console.log(countDesigners(adalabers));
+// Al final, modifica la estructura de datos para añadir, modificar o quitar adalabers. Y prueba que las funciones siguen devolviendo el valor correcto.
+
