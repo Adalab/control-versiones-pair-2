@@ -90,21 +90,16 @@ function handleFavs(event){
 favsBtn.addEventListener ('click', handleFavs);
 
 //TODO Ejercicio Extra. Previsión para ver la Luna del cazador
-// Cada 3 años se produce la Luna del cazador. Se vio el 5/10/2017. Vamos a crear un código que muestre en consola cuándo serán las 15 próximas lunas.
-// Antes de programar nada, escribamos el listado de las acciones (algoritmo) que tenemos que realizar.
-//*ALGORITMO
-//*Bucle que se repita 15 veces.
-//*Acumulador de años de tres en tres.
-const dates = [2017];
-let years = 2017;
+const dates = [];
+let moonYear = 2020;
 
-function sumar(){
-  for (let i = 0; i <dates.length; i++) {
-    return years+=3
+function moonYears(){
+  for (let i = 0; i <15; i++) {
+    moonYear+=3;
+    dates.push(moonYear);
+    console.log(`Podrás obserbar la "Luna del cazador” el 5 de octubre de ${moonYear}`);
   }
+}
 
-}
-for (let i = 0; i <=15; i++) {
-  sumar();
-  dates.push(years);
-}
+moonYears();
+
