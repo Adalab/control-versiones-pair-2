@@ -97,7 +97,7 @@ function moonYears(){
   for (let i = 0; i <15; i++) {
     moonYear+=3;
     dates.push(moonYear);
-    console.log(`Podrás obserbar la "Luna del cazador” el 5 de octubre de ${moonYear}`);
+    console.log(`Podrás observar la "Luna del cazador” el 5 de octubre de ${moonYear}`);
   }
 }
 
