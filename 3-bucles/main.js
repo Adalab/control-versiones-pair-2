@@ -179,5 +179,41 @@ adalabers.push({
 console.log(averageAge(adalabers));
 console.log(countAdalabers(adalabers));
 
+// TODO 2. Botones de alarma
+const alertForm= document.querySelector('.js-alert');
+const alertBtn = document.querySelectorAll('.js-alert-btn');
+function handleAlert(event){
+event.preventDefault();
+alertForm.classList.toggle('alert');
+}
+console.log(alertBtn)
+for (const btn of alertBtn) {
+  btn.addEventListener('click', handleAlert);
+}
 
-
+// TODO 3. Tipos de datos de una array
+const items = [
+  'Ada',
+  1815,
+  ['Informática', 'Matemática', 'Escritora'],
+  {
+    mother: 'Anna Isabella',
+    father: 'Lord Byron',
+  },
+];
+for (let item of items) {
+  if (Array.isArray(item)) {
+    console.log(`El dato ${item} está en la posición ${index} y es de tipo array.`);
+    for (let i = 0; i < item.length; i++) {
+      console.log(`  El dato ${item[i]} está en la posición ${i} del array y es de tipo ${typeof item[i]}.`);
+    }
+  } else if (typeof item === 'object') {
+    console.log(`El dato está en la posición ${index} y es de tipo object.`);
+    for (let key in item) {
+      console.log(`  La propiedad ${key} tiene el valor ${item[key]} y es de tipo ${typeof item[key]}.`);
+    }
+  } else {
+    console.log(`El dato ${item} está en la posición ${index} y es de tipo ${typeof item}.`);
+  }
+  index++;
+}
